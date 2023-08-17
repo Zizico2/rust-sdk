@@ -7,6 +7,7 @@ use tonic::{async_trait, transport::Channel as TonicChannel, Request};
 use crate::dapr::*;
 use crate::error::Error;
 
+#[derive(Clone)]
 pub struct Client<T>(T);
 
 impl<T: DaprInterface> Client<T> {
